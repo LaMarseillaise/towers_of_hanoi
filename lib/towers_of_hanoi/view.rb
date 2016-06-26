@@ -27,6 +27,14 @@ module TowersOfHanoi
       "Please enter a numeric value between 1 and 10.\n\n"
     end
 
+    def ask_origin
+      "Move from:"
+    end
+
+    def ask_destination
+      "Move to:"
+    end
+
     def victory_message(game)
       "Completed in #{game.turns} moves! (minimum: #{game.minimum_turns})"
     end

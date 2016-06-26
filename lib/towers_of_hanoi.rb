@@ -1,3 +1,4 @@
+require "towers_of_hanoi/controller"
 require "towers_of_hanoi/board"
 require "towers_of_hanoi/game"
 require "towers_of_hanoi/move"
