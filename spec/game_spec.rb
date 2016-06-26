@@ -27,4 +27,10 @@ describe TowersOfHanoi::Game do
       expect(game.board.tower(1).full?).to be false
     end
   end
+
+  describe "#minimum_turns" do
+    it "returns one less than 2 to the power of the number of bricks" do
+      expect(game.minimum_turns).to eq(1)
+    end
+  end
 end

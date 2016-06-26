@@ -24,5 +24,9 @@ module TowersOfHanoi
     def make_move(move)
       @moves << move if move.make(@board)
     end
+
+    def minimum_turns
+      2**number_of_bricks - 1
+    end
   end
 end

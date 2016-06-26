@@ -27,8 +27,8 @@ module TowersOfHanoi
       "Please enter a numeric value between 1 and 10.\n\n"
     end
 
-    def victory_message(turns: 0, min_turns: 0)
-      "Completed in #{turns} moves! (minimum: #{min_turns})"
+    def victory_message(game)
+      "Completed in #{game.turns} moves! (minimum: #{game.minimum_turns})"
     end
 
     def board_template(board)
