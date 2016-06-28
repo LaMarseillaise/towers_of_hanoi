@@ -1,0 +1,3 @@
+require "towers_of_hanoi.rb"
+
+TowersOfHanoi::Controller.new.run
