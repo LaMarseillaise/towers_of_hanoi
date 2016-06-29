@@ -1,1 +1,1 @@
-require_relative "../lib/towers_of_hanoi"
+require "towers_of_hanoi"
