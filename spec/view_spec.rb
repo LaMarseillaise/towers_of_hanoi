@@ -2,9 +2,8 @@ require "spec_helper"
 
 describe TowersOfHanoi::View do
   let(:view) { TowersOfHanoi::View.new }
-  let(:board){ TowersOfHanoi::Board.new }
   let(:move) { TowersOfHanoi::Move.new(origin: 1, destination: 2) }
-  let(:game) { TowersOfHanoi::Game.new(board: board) }
+  let(:game) { TowersOfHanoi::Game.new }
 
   describe "#victory_message" do
     it "returns a success message" do
@@ -16,8 +15,8 @@ describe TowersOfHanoi::View do
 
   describe "#board_template" do
     it "returns a representation of the state of the board" do
-      move.make(board)
-      expect(view.board_template(board)).to eq(
+      move.make(game.board)
+      expect(view.board_template(game.board)).to eq(
         "+-----------------+\n" +
         "|                 |\n" +
         "| ===             |\n" +

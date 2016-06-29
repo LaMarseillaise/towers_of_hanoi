@@ -2,9 +2,8 @@ require "spec_helper"
 
 describe TowersOfHanoi::Game do
   let(:move) { TowersOfHanoi::Move.new(origin: 1, destination: 3) }
-  let(:board){ TowersOfHanoi::Board.new(bricks: 1) }
-  let(:game) { TowersOfHanoi::Game.new(board: board) }
-  let(:endgame){ TowersOfHanoi::Game.new(board: board, moves: [move]) }
+  let(:game) { TowersOfHanoi::Game.new(bricks: 1) }
+  let(:endgame){ TowersOfHanoi::Game.new(bricks: 1, moves: [move]) }
 
   describe "#over?" do
     it "begins false" do

@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe TowersOfHanoi::Controller do
   let(:controller) { TowersOfHanoi::Controller.new }
-  let(:game) { TowersOfHanoi::Game.new(board: TowersOfHanoi::Board.new(bricks: 2)) }
+  let(:game) { TowersOfHanoi::Game.new(bricks: 2) }
 
   before do
     allow(controller).to receive(:puts)

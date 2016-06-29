@@ -2,8 +2,8 @@ module TowersOfHanoi
   class Game
     attr_reader :moves, :board
 
-    def initialize(board: TowersOfHanoi::Board.new(bricks: 3), moves: [])
-      @board = board
+    def initialize(bricks: 3, moves: [])
+      @board = TowersOfHanoi::Board.new(bricks: bricks)
       @moves = moves
 
       @moves.each { |move| move.make(@board) }

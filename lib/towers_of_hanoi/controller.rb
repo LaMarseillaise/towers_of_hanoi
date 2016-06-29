@@ -8,8 +8,7 @@ module TowersOfHanoi
       puts @view.introduction
       loop do
         if tiles = select_number_of_tiles
-          board = TowersOfHanoi::Board.new(bricks: tiles)
-          game = TowersOfHanoi::Game.new(board: board)
+          game = TowersOfHanoi::Game.new(bricks: tiles)
           puts @view.board_template(game.board)
           play(game)
           puts @view.victory_message(game)
