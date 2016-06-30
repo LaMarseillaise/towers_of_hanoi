@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "towers_of_hanoi"
+
+TowersOfHanoi::Controller.new.run
