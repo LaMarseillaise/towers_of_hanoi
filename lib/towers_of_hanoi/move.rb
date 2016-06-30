@@ -11,6 +11,8 @@ module TowersOfHanoi
       if valid?(board)
         board.tower(destination).add(board.tower(origin).remove)
       end
+
+      self
     end
 
 

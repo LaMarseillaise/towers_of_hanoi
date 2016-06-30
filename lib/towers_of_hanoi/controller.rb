@@ -25,10 +25,10 @@ module TowersOfHanoi
 
     def play(game)
       until game.over? do
-        game.make_move(TowersOfHanoi::Move.new(
-          origin:      get_input(@view.ask_origin).to_i,
-          destination: get_input(@view.ask_destination).to_i
-        ))
+        game.move(
+          from: get_input(@view.ask_origin).to_i,
+          to:   get_input(@view.ask_destination).to_i
+        )
         puts @view.board_template(game.board)
       end
     end

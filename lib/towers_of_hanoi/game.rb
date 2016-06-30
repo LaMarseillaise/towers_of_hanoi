@@ -1,12 +1,11 @@
 module TowersOfHanoi
   class Game
-    attr_reader :moves, :board
+    attr_reader :board
 
     def initialize(bricks: 3, moves: [])
       @board = TowersOfHanoi::Board.new(bricks: bricks)
-      @moves = moves
-
-      @moves.each { |move| move.make(@board) }
+      @moves = []
+      moves.each { |turn| move(from: turn[0], to: turn[1]) }
     end
 
     def number_of_bricks
@@ -21,8 +20,9 @@ module TowersOfHanoi
       @board.tower(3).full?
     end
 
-    def make_move(move)
-      @moves << move if move.make(@board)
+    def move(from: 0, to: 0)
+      new_move = TowersOfHanoi::Move.new(origin: from, destination: to)
+      @moves << new_move.make(@board)
     end
 
     def minimum_turns
