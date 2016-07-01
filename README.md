@@ -22,10 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
-With Ruby installed, a command line demonstration of this game can be run with the following command in this project's directory:
+After this gem is installed, a command line demonstration of this game can be run with the following command:
 
 ```
-$ bin/towers_of_hanoi
+$ towers_of_hanoi
 ```
 
 
