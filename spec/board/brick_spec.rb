@@ -16,7 +16,7 @@ describe TowersOfHanoi::Board::Brick do
       expect(brick2 < brick3).to be true
     end
 
-    it "returns false whenn the given brick is smaller" do
+    it "returns false when the given brick is smaller" do
       expect(brick3 < brick2).to be false
     end
   end
